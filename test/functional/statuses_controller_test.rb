@@ -18,7 +18,7 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "should create status" do
     assert_difference('Status.count') do
-      post :create, status: @status.attributes
+      post :create, status: { content: @status.content, name: @status.name }
     end
 
     assert_redirected_to status_path(assigns(:status))
@@ -35,7 +35,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should update status" do
-    put :update, id: @status, status: @status.attributes
+    put :update, id: @status, status: { content: @status.content, name: @status.name }
     assert_redirected_to status_path(assigns(:status))
   end
 

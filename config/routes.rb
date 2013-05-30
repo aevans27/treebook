@@ -23,6 +23,7 @@ end
   resources :user_friendships do
     member do
       put :accept
+      put :block
     end
   end
 

@@ -14,7 +14,7 @@ context "with a pending user friendship" do
 			end
 
 			should "return the correct message" do
-				assert_equal "Do you really want to be friends with Tim?", @decorator.sub_message
+				assert_equal "Friend request pending.", @decorator.sub_message
 			end
 		end
 	
